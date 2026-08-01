@@ -1,0 +1,30 @@
+# PostgresML
+
+> PostgresML brings machine learning and AI into PostgreSQL. It runs embeddings, LLM inference, vector search, and classic supervised learning (regression, classification, clustering) directly inside the database using the pgml extension, so applications index, filter, and rank vectors and generate fact-based outputs without a separate ML/vector stack. Access is via SQL over the Postgres wire protocol and the first-party Korvus SDK — there is no REST/HTTP API.
+
+## Product
+- [PostgresML](https://postgresml.org): In-database ML/AI for Postgres (embeddings, LLMs, vector search, training).
+- [Documentation](https://postgresml.org/docs): Guides for the pgml extension, Korvus SDK, and PostgresML Cloud.
+- [Pricing](https://postgresml.org/pricing): Serverless and dedicated PostgresML Cloud plans.
+- [Sign up / Cloud](https://postgresml.org/signup): Provision a managed PostgresML database.
+- [Blog](https://postgresml.org/blog): Engineering posts on in-database ML, RAG, and embeddings.
+
+## SDKs (first-party)
+- [Korvus (Python)](https://pypi.org/project/korvus/): pip install korvus — RAG-in-one-query SDK.
+- [Korvus (JavaScript)](https://www.npmjs.com/package/korvus): npm install korvus.
+- [Korvus (Rust)](https://crates.io/crates/korvus): cargo add korvus.
+- [Korvus (C)](https://github.com/postgresml/korvus): C bindings, build from source.
+- [postgresml-django](https://pypi.org/project/postgresml-django/): Django ORM integration for in-database embedding.
+
+## Source
+- [postgresml/postgresml](https://github.com/postgresml/postgresml): Postgres with GPUs for ML/AI apps (the pgml extension).
+- [postgresml/korvus](https://github.com/postgresml/korvus): Search/RAG SDK unifying the pipeline in a single query.
+- [postgresml/pgcat](https://github.com/postgresml/pgcat): PostgreSQL pooler with sharding, load balancing, failover.
+
+## Access
+- Authentication: PostgreSQL connection string (KORVUS_DATABASE_URL / DATABASE_URL). No API keys or OAuth.
+- Transport: PostgreSQL wire protocol (SQL). Managed PostgresML Cloud enforces TLS.
+
+## Community
+- [Discord](https://discord.gg/DmyJP3qJ7U): PostgresML community support.
+- [GitHub org](https://github.com/postgresml): All open-source repositories.

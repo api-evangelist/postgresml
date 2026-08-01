@@ -1,0 +1,46 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/postgresml/korvus + PyPI/npm/crates.io
+notes: >-
+  PostgresML has no REST API; access is via SQL over the Postgres wire protocol
+  and the first-party Korvus SDK, which ships identical bindings for Python,
+  JavaScript, Rust and C. The pgml Postgres extension itself is distributed as
+  source / Docker rather than a language package.
+packages:
+- language: python
+  registry: pypi
+  name: korvus
+  url: https://pypi.org/project/korvus/
+  install: pip install korvus
+  version: 1.1.5
+  official: true
+  repo: https://github.com/postgresml/korvus
+- language: javascript
+  registry: npm
+  name: korvus
+  url: https://www.npmjs.com/package/korvus
+  install: npm install korvus
+  official: true
+  repo: https://github.com/postgresml/korvus
+- language: rust
+  registry: crates.io
+  name: korvus
+  url: https://crates.io/crates/korvus
+  install: cargo add korvus
+  official: true
+  repo: https://github.com/postgresml/korvus
+- language: c
+  registry: source
+  name: korvus (C bindings)
+  url: https://github.com/postgresml/korvus
+  install: build from source (C header + shared library)
+  official: true
+  repo: https://github.com/postgresml/korvus
+- language: python
+  registry: pypi
+  name: postgresml-django
+  url: https://pypi.org/project/postgresml-django/
+  install: pip install postgresml-django
+  official: true
+  repo: https://github.com/postgresml/postgresml-django
+  notes: Django ORM integration for in-database embedding with PostgresML.

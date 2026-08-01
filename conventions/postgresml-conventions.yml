@@ -1,0 +1,41 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/postgresml/korvus + https://postgresml.org/docs
+notes: >-
+  PostgresML is consumed as SQL over the Postgres wire protocol and through the
+  Korvus SDK, not as an HTTP API. The cross-cutting conventions below describe
+  that SQL/SDK surface; HTTP-specific conventions (idempotency headers, cursor
+  pagination params, rate-limit headers) do not apply because there is no HTTP
+  request/response envelope.
+authentication:
+  style: postgres-connection-string
+  detail: KORVUS_DATABASE_URL / DATABASE_URL connection string; see authentication/postgresml-authentication.yml
+idempotency:
+  supported: false
+  detail: >-
+    No HTTP idempotency-key mechanism. Write semantics are Postgres transactional;
+    the Korvus upsert_documents operation is idempotent by document id at the SQL
+    level, but there is no request-level idempotency key contract.
+pagination:
+  style: sql
+  detail: Result sizing is via SQL LIMIT / vector_search limit arguments, not HTTP page cursors.
+versioning:
+  scheme: semver-sdk
+  detail: Versioning is per Korvus SDK release and per pgml extension version; no URI/header API version.
+error_envelope:
+  style: postgres-error / language-native-exception
+  detail: >-
+    Errors surface as PostgreSQL error codes (SQLSTATE) over the wire and are
+    raised as native exceptions by the Korvus SDK bindings. No RFC 9457
+    problem+json envelope.
+rate_limiting:
+  style: database-connection-limits
+  detail: >-
+    Throughput is bounded by Postgres connection/pool limits (PgCat pooler on
+    PostgresML Cloud), not by HTTP rate-limit headers.
+transport:
+  protocol: postgresql-wire-protocol
+  tls: available (managed cloud enforces TLS)
+cross_links:
+  authentication: authentication/postgresml-authentication.yml
+  packages: packages/postgresml-packages.yml

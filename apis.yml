@@ -1,8 +1,31 @@
 aid: postgresml
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/postgresml.png
 name: PostgresML
-description: 'PostgresML is a company surfaced as a portfolio company of amplify-partners and added to
-  the API Evangelist network as a stub for enrichment. Sector: ai-ml. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  PostgresML brings machine learning and AI into PostgreSQL. Using the open-source
+  pgml extension it runs embedding generation, LLM inference, vector search, and
+  classic supervised learning (regression, classification, clustering) directly
+  inside the database, so applications index, filter, and rank vectors and generate
+  fact-based, real-time outputs without operating a separate ML or vector stack.
+  It is consumed as SQL over the Postgres wire protocol and through the first-party
+  Korvus SDK (Python, JavaScript, Rust, and C bindings), which unifies the entire
+  RAG pipeline into a single database query. PostgresML Cloud offers managed
+  serverless and dedicated Postgres databases with the extensions pre-installed,
+  and PgCat provides connection pooling, sharding, and failover. There is no
+  REST/HTTP API; authentication is a standard PostgreSQL connection string.
+  Backed by Amplify Partners.
 url: https://raw.githubusercontent.com/api-evangelist/postgresml/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,10 +35,17 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
 - Ai Ml
+- Machine Learning
+- Vector Search
+- Embeddings
+- PostgreSQL
+- RAG
+- LLM
+- Database
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -25,3 +55,40 @@ maintainers:
 common:
 - type: Website
   url: https://postgresml.org
+- type: DeveloperPortal
+  url: https://postgresml.org/docs
+- type: Documentation
+  url: https://postgresml.org/docs
+- type: Blog
+  url: https://postgresml.org/blog
+- type: Pricing
+  url: https://postgresml.org/pricing
+- type: SignUp
+  url: https://postgresml.org/signup
+- type: TermsOfService
+  url: https://postgresml.org/tos
+- type: PrivacyPolicy
+  url: https://postgresml.org/privacy
+- type: Support
+  url: https://discord.gg/DmyJP3qJ7U
+- type: GitHubOrganization
+  url: https://github.com/postgresml
+- type: Packages
+  url: packages/postgresml-packages.yml
+- type: SDKs
+  url: packages/postgresml-packages.yml
+- type: Authentication
+  url: authentication/postgresml-authentication.yml
+- type: Conventions
+  url: conventions/postgresml-conventions.yml
+- type: DomainSecurity
+  url: security/postgresml-domain-security.yml
+- type: WellKnown
+  url: well-known/postgresml-well-known.yml
+- type: LLMsTxt
+  url: llms/postgresml-llms.txt
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 6
+  pass: local-v1

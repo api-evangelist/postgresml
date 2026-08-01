@@ -1,0 +1,25 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/postgresml/korvus + https://postgresml.org/docs
+notes: >-
+  PostgresML exposes no REST/HTTP API and therefore no OpenAPI securitySchemes.
+  Authentication is Postgres-native: clients authenticate with a PostgreSQL
+  connection string (DATABASE_URL) that carries the username, password and host
+  of a self-hosted Postgres (with the pgml + pgvector extensions) or a managed
+  PostgresML Cloud database. The Korvus SDK reads this from the
+  KORVUS_DATABASE_URL environment variable.
+summary:
+  types: [connection-string]
+  api_key_in: []
+  oauth2_flows: []
+schemes:
+- name: postgres-connection-string
+  type: connection-string
+  transport: postgres-wire-protocol
+  secret: KORVUS_DATABASE_URL / DATABASE_URL
+  format: "postgresql://user:password@host:port/database"
+  docs: https://postgresml.org/docs
+  notes: >-
+    No API keys, bearer tokens or OAuth. Access control and TLS are handled at
+    the Postgres/PgCat layer; PostgresML Cloud provisions per-database
+    credentials.
