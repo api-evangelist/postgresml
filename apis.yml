@@ -50,7 +50,7 @@ modified: '2026-07-20'
 tags:
 - Company
 - Ai Ml
-- Machine-Learning
+- Machine Learning
 - Vector Search
 - Embeddings
 - PostgreSQL
@@ -67,6 +67,7 @@ tags_raw:
 - RAG
 - LLM
 - Database
+- Machine-Learning
 apis: []
 maintainers:
 - FN: Kin Lane
