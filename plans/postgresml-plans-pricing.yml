@@ -1,0 +1,55 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-07'
+method: searched
+source: https://postgresml.org/pricing
+sources:
+- https://postgresml.org/pricing
+provenance:
+  tool: all/0-working/economics/harvest_pricing.py
+  run: 20261007T104522
+  grounding: every price_text was found verbatim in the fetched page text
+audience: developer-api
+pricing_basis: usage-other
+delivery:
+  delivery: managed+licensed
+  method: page
+  read: '2026-10-07'
+  evidence: VPC deployments on major cloud providers in any region
+  managed_tier: Serverless
+published: true
+note: Serverless/dedicated usage-based pricing plus $100 free credits; Enterprise is custom.
+plan_count: 5
+currency: USD
+plans:
+- name: Serverless
+  price_text: From $7.50 per query hour
+  price: 7.5
+  currency: USD
+  period: per-use
+  unit: query hour
+  included_quota: Pay-per-use, Burst GPU capacity, Access curated models, Support on Discord
+- name: Dedicated
+  price_text: From $0.60 per instance hour
+  price: 0.6
+  currency: USD
+  period: per-use
+  unit: instance hour
+  included_quota: Committed use discounts, Dedicated hardware, any HuggingFace model, deploy on major
+    clouds, private Slack/MS Teams support
+- name: Enterprise
+  price_text: Custom pricing
+  period: none
+  included_quota: VPC deployments, multiple GPUs, custom SLAs, premium support
+- name: Tables & index storage
+  price_text: $0.25/GB per month
+  price: 0.25
+  currency: USD
+  period: month
+  unit: GB
+- name: Retrieval, filtering, ranking & other queries
+  price_text: $7.50 per hour
+  price: 7.5
+  currency: USD
+  period: per-use
+  unit: hour
+  included_quota: Embeddings, LLMs, Fine tuning, Machine learning included w/ queries
