@@ -1,0 +1,13 @@
+fetched: '2026-10-13'
+method: fetched
+source: https://raw.githubusercontent.com/postgresml/postgresml/master/README.md
+page: https://raw.githubusercontent.com/postgresml/postgresml/master/README.md
+file: postgresml-postgres-wire-1.md
+bytes: 10255
+sha256: 42b326907f78e5479b29187ae903366576edc1799930f5f3dd10661c14c1af96
+anchor: postgresql
+shape: postgres-wire
+classification: declares-compatibility
+quote: The only prerequisites for using PostgresML is a Postgres database with our open-source `pgml` extension
+  installed.
+note: text extracted from the provider's own page (tags stripped), saved for evidence
